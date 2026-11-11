@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Deteksi Manusia & Estimasi Usia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Deteksi Manusia & Estimasi Usia</h1>
+    <p id="status">Memuat model AI…</p>
+  </header>
+
+  <main>
+    <div class="stage" id="stage">
+      <video id="video" autoplay muted playsinline></video>
+      <canvas id="overlay"></canvas>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn" disabled>Mulai Kamera</button>
+      <button id="flipBtn" class="secondary" disabled>Balik Kamera</button>
+    </div>
+
+    <div class="info">
+      <span>Wajah terdeteksi: <strong id="count">0</strong></span>
+    </div>
+
+    <p class="privacy">
+      Semua proses berjalan di perangkat Anda. Tidak ada gambar yang dikirim atau disimpan.
+      Estimasi usia hanya perkiraan dan bisa meleset beberapa tahun.
+    </p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
